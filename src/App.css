@@ -4,6 +4,11 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
 
 .App {

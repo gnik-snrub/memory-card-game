@@ -26,6 +26,7 @@ const GameArea = () => {
     const [usedCards, setUsedCards] = useState([])
 	const [currentScore, setCurrentScore] = useState(0)
 	const [highScore, setHighScore] = useState(0)
+    const [gameOver, setGameOver] = useState(false)
 
     const newGame = () => {
         setCurrentScore(0)
@@ -80,17 +81,26 @@ const GameArea = () => {
 
     const endGame = () => {
         newGame()
+        setGameOver(true)
+        setTimeout(() => {
+            setGameOver(false)
+        }, 2000);
     }
 
     return(
         <div className = 'gamearea'>
-            <p>Current Score: {currentScore}</p>
-            <p>MEMORY GAME</p>
-            <p>High Score: {highScore}</p>
-            <div className = 'gameboard'>
-                {collectCards()}
-            </div>
-		    	<Button task = {newGame} label = 'New Game' />
+            <header>
+                <p>Current Score: {currentScore}</p>
+                <p>MEMORY GAME</p>
+                <p>High Score: {highScore}</p>
+            </header>
+            {gameOver
+                ?   <div className = 'gameover'>GAME OVER</div>
+                :   <div className = 'gameboard'>
+                        {collectCards()}
+                    </div>
+            }
+		    <Button task = {newGame} label = 'New Game' />
         </div>
     )
 }
