@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/gnik-snrub/memory-card-game/static/css/main.264cb889.chunk.css",
+    "main.js": "/gnik-snrub/memory-card-game/static/js/main.907b3dff.chunk.js",
+    "main.js.map": "/gnik-snrub/memory-card-game/static/js/main.907b3dff.chunk.js.map",
+    "runtime-main.js": "/gnik-snrub/memory-card-game/static/js/runtime-main.98113d0d.js",
+    "runtime-main.js.map": "/gnik-snrub/memory-card-game/static/js/runtime-main.98113d0d.js.map",
+    "static/js/2.8d037c9f.chunk.js": "/gnik-snrub/memory-card-game/static/js/2.8d037c9f.chunk.js",
+    "static/js/2.8d037c9f.chunk.js.map": "/gnik-snrub/memory-card-game/static/js/2.8d037c9f.chunk.js.map",
+    "index.html": "/gnik-snrub/memory-card-game/index.html",
+    "static/css/main.264cb889.chunk.css.map": "/gnik-snrub/memory-card-game/static/css/main.264cb889.chunk.css.map",
+    "static/js/2.8d037c9f.chunk.js.LICENSE.txt": "/gnik-snrub/memory-card-game/static/js/2.8d037c9f.chunk.js.LICENSE.txt",
+    "static/media/by.png": "/gnik-snrub/memory-card-game/static/media/by.5e804f86.png",
+    "static/media/ge.png": "/gnik-snrub/memory-card-game/static/media/ge.9b0e75b2.png",
+    "static/media/kg.png": "/gnik-snrub/memory-card-game/static/media/kg.2be97b38.png",
+    "static/media/kz.png": "/gnik-snrub/memory-card-game/static/media/kz.be65393c.png",
+    "static/media/md.png": "/gnik-snrub/memory-card-game/static/media/md.7a1a1946.png",
+    "static/media/tm.png": "/gnik-snrub/memory-card-game/static/media/tm.f75aed56.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.98113d0d.js",
+    "static/js/2.8d037c9f.chunk.js",
+    "static/css/main.264cb889.chunk.css",
+    "static/js/main.907b3dff.chunk.js"
+  ]
+}
