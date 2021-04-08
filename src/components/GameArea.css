@@ -1,0 +1,17 @@
+.gamearea {
+    width: 60%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gameboard {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 21px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 7px;
+}
