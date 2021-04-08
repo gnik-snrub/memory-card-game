@@ -5,6 +5,8 @@ button {
     transition: 0.2s;
     border-radius: 15px;
     padding: 3px 20px;
+    font-size: 1rem;
+    color: rgb(233, 224, 195);
 }
 
 button:hover {

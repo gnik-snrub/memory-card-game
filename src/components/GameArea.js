@@ -6,22 +6,22 @@ import './GameArea.css'
 
 const GameArea = () => {
     const [deck, setDeck] = useState([
-        'Russia',
-        'Ukraine',
-        'Belarus', 
-        'Moldova',
-        'Uzbekistan',
-        'Kazakhstan',
-        'Kyrgyzstan',
-        'Tajikistan',
-        'Turkmenistan',
-        'Georgia',
-        'Azerbaijan',
-        'Armenia',
-        'Lithuania',
-        'Latvia',
-        'Estonia',
-        'USSR'
+        'am',
+        'az',
+        'by', 
+        'ee',
+        'ge',
+        'kg',
+        'kz',
+        'lt',
+        'lv',
+        'md',
+        'ru',
+        'tj',
+        'tm',
+        'ua',
+        'ussr',
+        'uz'
     ])
     const [usedCards, setUsedCards] = useState([])
 	const [currentScore, setCurrentScore] = useState(0)
@@ -73,7 +73,7 @@ const GameArea = () => {
         const cardElements = []
         for (let state of deck) {
             cardElements.push(
-                <Card key = {uniqid()} label = {state} click = {checkNewCard} />
+                <Card key = {uniqid()} file = {state} click = {checkNewCard} />
             )
         }
         return cardElements
@@ -100,7 +100,7 @@ const GameArea = () => {
                         {collectCards()}
                     </div>
             }
-		    <Button task = {newGame} label = 'New Game' />
+            <Button task = {newGame} label = 'New Game' />
         </div>
     )
 }

@@ -9,14 +9,13 @@ html, body {
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
+    color: rgb(233, 224, 195);
 }
 
 .App {
-    display: flex;
-    align-items: center;
-	justify-content: center;
-    flex-direction: column;
+    display: grid;
+    place-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: yellowgreen;
+    background-color: rgb(116, 74, 141);
 }
