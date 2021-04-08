@@ -23,10 +23,15 @@ const GameArea = () => {
         'Estonia',
         'USSR'
     ])
+    const [usedCards, setUsedCards] = useState([])
+	const [currentScore, setCurrentScore] = useState(0)
+	const [highScore, setHighScore] = useState(0)
 
-    useEffect(() => {
+    const newGame = () => {
+        setCurrentScore(0)
+        setUsedCards([])
         shuffleDeck()
-    }, [])
+    }
 
     const shuffleDeck = () => {
         const newDeck = [ ...deck ]
@@ -39,22 +44,53 @@ const GameArea = () => {
         setDeck(newDeck)
     }
 
+    useEffect(() => {
+        shuffleDeck()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
+
+    const checkNewCard = (newCard) => {
+        const used = usedCards
+        if (!used.includes(newCard)) {
+            used.push(newCard)
+            setUsedCards(used)
+            setCurrentScore(currentScore + 1)
+        } else {
+            endGame()
+        }
+        console.log(usedCards)
+        shuffleDeck()
+    }
+
+    useEffect(() => {
+        if (currentScore > highScore) {
+            setHighScore(currentScore)
+        }
+    }, [currentScore, highScore])
+
     const collectCards = () => {
         const cardElements = []
         for (let state of deck) {
             cardElements.push(
-                <Card label = {state} key = {uniqid()} />
+                <Card key = {uniqid()} label = {state} click = {checkNewCard} />
             )
         }
         return cardElements
     }
 
+    const endGame = () => {
+        newGame()
+    }
+
     return(
         <div className = 'gamearea'>
+            <p>Current Score: {currentScore}</p>
+            <p>MEMORY GAME</p>
+            <p>High Score: {highScore}</p>
             <div className = 'gameboard'>
                 {collectCards()}
             </div>
-		    	<Button task = {shuffleDeck} label = 'New Game' />
+		    	<Button task = {newGame} label = 'New Game' />
         </div>
     )
 }

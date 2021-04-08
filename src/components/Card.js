@@ -2,10 +2,10 @@ import PropTypes from 'prop-types'
 import './Card.css'
 
 const Card = (props) => {
-    const { label } = props
+    const { label, click } = props
 
     return(
-        <div className = 'gamecard'>
+        <div className = 'gamecard' onClick = {() => {click(label)}}>
             {label}
         </div>
     )
