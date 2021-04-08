@@ -47,6 +47,7 @@ const GameArea = () => {
 
     useEffect(() => {
         shuffleDeck()
+        document.title = 'Memory Game'
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
